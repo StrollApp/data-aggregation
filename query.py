@@ -5,7 +5,7 @@ api = overpy.Overpass()
 #test one: (37.87139, -122.27330, 37.87257, -122.27175) 
 
 result = api.query("""
-    way(37.84369, -122.33657, 37.91079, -122.22803) ["highway"] ["service" != "alley"] ["service" != "emergency_access"] ["service" != "drive-through"] ["service" != "slipway"];
+    way(37.84369, -122.33657, 37.91079, -122.22803) ["highway"] ["service" != "alley"] ["service" != "emergency_access"] ["service" != "drive-through"] ["service" != "slipway"] ["service" != "parking_aisle"] ["service" != "driveway"] ["highway" != "motorway"] ["highway" != "motorway_link"] ["highway" != "corridor"];
     (._;>;);
     out body;
     """)
